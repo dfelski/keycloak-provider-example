@@ -6,11 +6,11 @@
         <version>1.0</version>
     </parent>
 
-    <name>exampl-ear</name>
+    <name>example-ear</name>
     <description/>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>exampl-ear</artifactId>
+    <artifactId>example-ear</artifactId>
     <packaging>ear</packaging>
 
     <dependencies>
