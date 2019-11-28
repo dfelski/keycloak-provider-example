@@ -15,16 +15,17 @@ public class MyEventListenerProviderFactory implements EventListenerProviderFact
 
     @Override
     public void init(Config.Scope scope) {
+        // nothing to do
     }
 
     @Override
     public void postInit(KeycloakSessionFactory keycloakSessionFactory) {
-
+        // nothing to do
     }
 
     @Override
     public void close() {
-
+        // nothing to do
     }
 
     @Override

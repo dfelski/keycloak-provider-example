@@ -1,5 +1,6 @@
 package com.example;
 
+import com.google.common.base.Joiner;
 import org.keycloak.events.admin.AdminEvent;
 import org.keycloak.events.Event;
 import org.keycloak.events.EventListenerProvider;
@@ -10,11 +11,8 @@ public class MyEventListenerProvider implements EventListenerProvider {
 
     @Override
     public void onEvent(Event event) {
-        StringBuilder stringBuilder = new StringBuilder()
-                .append("eventType = '").append(event.getType())
-                .append("', userId= '").append(event.getUserId())
-                .append("', Username=  '").append(event.getDetails().get("username")).append("'");
-        System.out.println(stringBuilder.toString());
+        Joiner joiner = Joiner.on(" ").skipNulls();
+        System.out.println(joiner.join("eventType= ", event.getType(),"userId= ", event.getUserId(), "Username= ", event.getDetails().get("username")));
     }
 
     @Override
@@ -24,6 +22,7 @@ public class MyEventListenerProvider implements EventListenerProvider {
 
     @Override
     public void close() {
+        // nothing to do
     }
 
 }
